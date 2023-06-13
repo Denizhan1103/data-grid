@@ -1,0 +1,22 @@
+.scmedia {
+  margin-bottom: 23px;
+  &__title {
+    // TODO: implement this font family
+    font-family: "Poppins";
+    font-weight: 500;
+    font-size: 13px;
+    color: #06163a;
+    margin-bottom: 5px;
+  }
+
+  &__input {
+    height: 40px;
+    padding: 0;
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 17px;
+    justify-content: flex-end;
+  }
+}
