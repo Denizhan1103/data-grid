@@ -1,15 +1,14 @@
 .header {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  height: 104px;
+  padding: 0 104px;
 
   &__logo {
     width: 124px;
     height: 36px;
-  }
-
-  &__navbar {
-    display: flex;
+    cursor: pointer;
   }
 }
 
@@ -17,4 +16,26 @@
   display: flex;
   align-items: center;
   list-style: none;
+  flex: 1;
+  justify-content: space-between;
+  padding: 0 178px;
+
+  &__item {
+    font-family: "Poppins";
+    font-weight: 400;
+    font-size: 14px;
+    cursor: pointer;
+  }
+}
+
+.headericon {
+  display: flex;
+  list-style: none;
+  gap: 14px;
+
+  &__item {
+    width: 18px;
+    height: 14px;
+    cursor: pointer;
+  }
 }

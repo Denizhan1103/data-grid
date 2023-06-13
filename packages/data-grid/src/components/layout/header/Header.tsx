@@ -5,14 +5,17 @@ import "./Header.scss";
 
 import Logo from "../../../assets/global/Logo.svg";
 
+import BeSocialIcon from "../../../assets/header/BeSocial.svg";
+import InstagramIcon from "../../../assets/header/Instagram.svg";
+import LinkedinIcon from "../../../assets/header/Linkedin.svg";
+import YoutubeIcon from "../../../assets/header/Youtube.svg";
+
 export default function Header() {
   return (
     <header className="header">
       <img className="header__logo" src={Logo} />
-      <section className="header__navbar">
-        <HeaderNavbarList />
-        <HeaderIconList />
-      </section>
+      <HeaderNavbarList />
+      <HeaderIconList />
     </header>
   );
 }
@@ -53,19 +56,19 @@ function HeaderNavbarList() {
 function HeaderIconList() {
   const iconList: IconItem[] = [
     {
-      icon: "",
+      icon: YoutubeIcon,
       to: "#",
     },
     {
-      icon: "",
+      icon: InstagramIcon,
       to: "#",
     },
     {
-      icon: "",
+      icon: BeSocialIcon,
       to: "#",
     },
     {
-      icon: "",
+      icon: LinkedinIcon,
       to: "#",
     },
   ];
