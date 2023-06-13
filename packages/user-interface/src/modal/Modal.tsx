@@ -1,12 +1,20 @@
-import React, { useRef, createContext } from 'react';
+import React, { useRef, createContext } from "react";
 
 // import useClickOutside from './UseClickOutside';
 
-import {ModalProperties,ModalContainerProperties,ModalCloseButtonProperties } from './Modal.d';
+import {
+  ModalProperties,
+  ModalContainerProperties,
+  ModalCloseButtonProperties,
+} from "./Modal.d";
 
 const ModalContext = createContext(null);
 
-function Modal({ children, className, onClickOutside = () => {} }: ModalProperties) {
+function Modal({
+  children,
+  className,
+  onClickOutside = () => {},
+}: ModalProperties) {
   const modalRef = useRef();
 
   // React.useEffect(() => {
@@ -22,17 +30,18 @@ function Modal({ children, className, onClickOutside = () => {} }: ModalProperti
   );
 }
 
-function ModalContainer({children,className}
-  :ModalContainerProperties) {
-    checkModalValidity();
+function ModalContainer({ children, className }: ModalContainerProperties) {
+  checkModalValidity();
 
-  return (
-    <div className={className}>{children}</div>
-  )
+  return <div className={className}>{children}</div>;
 }
 
 // TODO: fix typo
-function ModalCloseButton({children,className,onClick}:ModalCloseButtonProperties) {
+function ModalCloseButton({
+  children,
+  className,
+  onClick,
+}: ModalCloseButtonProperties) {
   checkModalValidity();
 
   return (
@@ -47,13 +56,13 @@ const checkModalValidity = () => {
 
   if (modalData === null)
     throw new Error(
-      'Unexpected component usage. <Modal.CloseButton /> must be has <Modal /> as parent component.'
+      "Unexpected component usage. <Modal.CloseButton /> must be has <Modal /> as parent component."
     );
 
   return true;
 };
 
 export default Object.assign(Modal, {
-  Container:ModalContainer,
+  Container: ModalContainer,
   CloseButton: ModalCloseButton,
 });
