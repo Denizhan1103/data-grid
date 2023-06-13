@@ -1,0 +1,12 @@
+{
+  "name": "data-grid",
+  "version": "1.0.0",
+  "main": "index.js",
+  "private":true,
+  "repository": "https://github.com/Denizhan1103/data-grid.git",
+  "author": "Denizhan",
+  "license": "MIT",
+  "workspaces": [
+    "packages/*"
+  ]
+}
