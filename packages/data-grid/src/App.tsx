@@ -1,7 +1,9 @@
 import React from "react";
 
+import RouterProvider from "./router";
+
 function App() {
-  return <div className="test">ok</div>;
+  return <RouterProvider />;
 }
 
 export default App;
