@@ -1,0 +1,39 @@
+.button {
+  width: 175px;
+  height: 42px;
+  border-radius: 39px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  // TODO: implement this font family
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s ease background-color;
+
+  &--primary {
+    background-color: #744bfc;
+    color: #fff;
+
+    &:hover {
+      background-color: #6941ee;
+    }
+  }
+
+  &--secondary {
+    background-color: #fff;
+    color: #744bfc;
+
+    &:hover {
+      background-color: rgb(211, 211, 211);
+    }
+  }
+
+  &__text {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+}
