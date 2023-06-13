@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 
 import { Modal as ModalHeadless } from "user-interface";
 import { ComponentProperties } from "./Modal.d";

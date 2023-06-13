@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 
 import { Input as InputHeadless } from "user-interface";
 import { ComponentProperties } from "./Input.d";
