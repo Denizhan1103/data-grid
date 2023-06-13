@@ -10,7 +10,7 @@ export default function Button({
   icon,
   type = "primary",
   height,
-  className,
+  className = "",
   width,
   onClick = () => {},
 }: ComponentProperties) {
