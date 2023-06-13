@@ -1,13 +1,14 @@
 import React from "react";
 
 import type { NavbarItem, IconItem } from "./Header.d";
-
 import "./Header.scss";
+
+import Logo from "../../../assets/global/Logo.svg";
 
 export default function Header() {
   return (
     <header className="header">
-      <img className="header__logo" src="" />
+      <img className="header__logo" src={Logo} />
       <section className="header__navbar">
         <HeaderNavbarList />
         <HeaderIconList />

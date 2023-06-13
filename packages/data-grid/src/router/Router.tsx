@@ -4,11 +4,18 @@ import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 
 // TODO: fix relative path
 import MainLayout from "../layouts/main";
+import { Main } from "../view";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout />,
+    children: [
+      {
+        path: "/",
+        element: <Main />,
+      },
+    ],
   },
 ]);
 

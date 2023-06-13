@@ -7,4 +7,14 @@
     width: 124px;
     height: 36px;
   }
+
+  &__navbar {
+    display: flex;
+  }
+}
+
+.headernavbar {
+  display: flex;
+  align-items: center;
+  list-style: none;
 }
