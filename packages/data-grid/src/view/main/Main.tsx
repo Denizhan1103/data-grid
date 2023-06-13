@@ -13,9 +13,9 @@ export default function Main() {
     <div className="main">
       <section className="main__header">
         <div className="main__header--filter">
-          <Input placeholder="Arama yap..." />
-          <Button icon={SearchIcon} />
-          <Button icon={FilterIcon} />
+          <Input placeholder="Arama yap..." className="filter__input" />
+          <Button icon={SearchIcon} className="filter__search" />
+          <Button icon={FilterIcon} className="filter__filterdetail" />
         </div>
         <div className="main__header--buttons">
           <Button icon={PlusIcon} name="Yeni Hesap Ekle" />

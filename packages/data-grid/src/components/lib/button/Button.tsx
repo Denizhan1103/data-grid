@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback } from "react";
 
 import { Button as ButtonHeadless } from "user-interface";
 
@@ -14,13 +14,17 @@ export default function Button({
   width,
   onClick = () => {},
 }: ComponentProperties) {
+  const ButtonIcon = useCallback(() => {
+    return <>{icon ? <img src={icon} className="button__icon" /> : null}</>;
+  }, [icon]);
+
   return (
     <ButtonHeadless
       onClick={onClick}
       className={`button button--${type} ${className}`}
       style={{ height, width }}
     >
-      <div className="button__icon"></div>
+      <ButtonIcon />
       <p className="button__text">{name}</p>
     </ButtonHeadless>
   );
