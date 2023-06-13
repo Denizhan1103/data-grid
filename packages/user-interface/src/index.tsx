@@ -1,3 +1,7 @@
-export * from "./button"
-export * from "./input"
-export * from "./modal"
+// TODO: fix thes module system
+
+import Button from "./button";
+import Input from "./input";
+import Modal from "./modal";
+
+export { Button, Input, Modal };
