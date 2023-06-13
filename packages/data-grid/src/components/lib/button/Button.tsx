@@ -10,13 +10,14 @@ export default function Button({
   icon,
   type = "primary",
   height,
+  className,
   width,
   onClick = () => {},
 }: ComponentProperties) {
   return (
     <ButtonHeadless
       onClick={onClick}
-      className={`button button--${type}`}
+      className={`button button--${type} ${className}`}
       style={{ height, width }}
     >
       <div className="button__icon"></div>

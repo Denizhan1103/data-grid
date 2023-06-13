@@ -1,7 +1,8 @@
 export interface ComponentProperties {
-  name: string;
+  name?: string;
   icon?: string;
   type?: ButtonType;
+  className?: string;
   height?: number;
   width?: number;
   onClick?: () => void;
