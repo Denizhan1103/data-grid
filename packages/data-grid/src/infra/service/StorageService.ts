@@ -49,8 +49,15 @@ const serviceMiddleware = () => {
 const storageService = () => {
   serviceMiddleware();
 
-  const getAllSocialMedia = () => {
-    return JSON.parse(localStorage.getItem(storageTableDataKey) || "");
+  const getAllSocialMedia = (currentPage: number, itemCount: number) => {
+    const socialMediaList = JSON.parse(
+      localStorage.getItem(storageTableDataKey) || ""
+    );
+    const totalPageCount = Math.ceil(socialMediaList.length / itemCount);
+    return {
+      data: "",
+      meta: "",
+    };
   };
   const getSingleSocialMedia = () => {};
   const addSocialMedia = () => {};
