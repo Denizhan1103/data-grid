@@ -7,6 +7,8 @@ export interface ComponentProperties {
 export interface TableHeader {
   name: string;
   accessor: string;
+  sortable?: boolean;
+  defaultSortingValue?: "increment" | "decrement";
 }
 
 export interface TableMeta {

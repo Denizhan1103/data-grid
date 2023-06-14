@@ -7,4 +7,32 @@
   );
   border-radius: 6px;
   padding: 44px 75px 29px 75px;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 11px;
+
+    &-filter {
+      display: flex;
+    }
+  }
+}
+
+.filter {
+  &__search {
+    width: 45px;
+    height: 42px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    padding: 0;
+  }
+
+  &__input {
+    width: 380px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border: none;
+  }
 }
