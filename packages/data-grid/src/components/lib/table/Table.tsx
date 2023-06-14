@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { ComponentProperties } from "./Table.d";
 import "./Table.scss";
@@ -8,6 +8,11 @@ export default function Table({
   meta,
   header,
 }: ComponentProperties) {
+  // TODO: ask typing
+  const [currentActiveSorter, setCurrentActiveSorter] = useState<string | null>(
+    null
+  );
+
   const checkDataPerItem = (perItem: unknown) => {
     if (typeof perItem === "object" && perItem !== null && "id" in perItem)
       return true;
@@ -18,19 +23,26 @@ export default function Table({
     <table className="table">
       <thead className="table__header">
         <tr className="table__header-row">
-          {header.map(({ name, accessor }) => {
-            return (
-              <th className="table__header-col" key={accessor}>
-                <div className="table__header-colcontainer">
-                  {name}
-                  <div className="table__header-colicon">X</div>
-                </div>
-              </th>
-            );
-          })}
+          {header.map(
+            ({
+              name,
+              accessor,
+              sortable = false,
+              defaultSortingValue = "decrement",
+            }) => {
+              return (
+                <th className="table__header-col" key={accessor}>
+                  <div className="table__header-colcontainer">
+                    {name}
+                    <div className="table__header-colicon">X</div>
+                  </div>
+                </th>
+              );
+            }
+          )}
         </tr>
       </thead>
-      <tbody>
+      <tbody className="table__body">
         {data.map((perItem) => {
           if (!checkDataPerItem(perItem)) {
             throw new Error(
@@ -38,9 +50,9 @@ export default function Table({
             );
           }
           return (
-            <tr key={perItem.id}>
+            <tr className="table__body-row" key={perItem.id}>
               {header.map(({ accessor }) => {
-                return <td>{perItem[accessor]}</td>;
+                return <td className="table__body-col">{perItem[accessor]}</td>;
               })}
             </tr>
           );

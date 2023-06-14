@@ -1,5 +1,6 @@
 .table {
   width: 100%;
+  border-collapse: collapse;
 
   &__header {
     &-row {
@@ -27,6 +28,36 @@
       justify-content: space-between;
       align-items: center;
       padding: 0 26px;
+    }
+  }
+
+  &__body {
+    &-row {
+      height: 66px;
+      background: rgba(255, 255, 255, 0.71);
+      cursor: pointer;
+      transition: 0.2s ease box-shadow;
+
+      &:nth-child(2n) {
+        background: transparent;
+      }
+
+      &:hover {
+        box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.11);
+      }
+    }
+
+    &-col {
+      font-family: "Inter";
+      font-weight: 400;
+      font-size: 12px;
+      color: #000000;
+      padding: 0 26px;
+      border-right: 1px solid #c4cee5;
+
+      &:last-child {
+        border-right: none;
+      }
     }
   }
 }

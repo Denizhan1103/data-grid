@@ -26,6 +26,25 @@ const tableHeaderData = [
   },
 ];
 
+const tableData = [
+  {
+    id: 1,
+    name: "Linkedin",
+    link: "linkedin.com",
+    description: "öyle işte",
+  },
+  {
+    id: 2,
+    name: "İnsta",
+    link: "insta.com",
+  },
+  {
+    id: 3,
+    name: "Youtube",
+    description: "garip mekan",
+  },
+];
+
 export default function Main() {
   return (
     <div className="main">
@@ -46,7 +65,7 @@ export default function Main() {
         />
       </section>
       <section className="main__table">
-        <Table header={tableHeaderData} />
+        <Table header={tableHeaderData} data={tableData} />
       </section>
       <section className="main__footer"></section>
       <div className="hello">alo</div>
