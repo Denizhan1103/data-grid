@@ -7,17 +7,19 @@ export default function Input({
   className,
   style,
   startValue,
-  type,
   onChange,
+  onFocus,
+  onBlur,
 }: ComponentProperties) {
   return (
     <input
       value={startValue}
       className={className}
       style={style}
-      type={type}
       placeholder={placeholder}
       onChange={onChange}
+      onFocus={onFocus}
+      onBlur={onBlur}
     />
   );
 }

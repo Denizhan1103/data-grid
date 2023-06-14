@@ -20,28 +20,28 @@ export default function Header() {
   );
 }
 
+const navbarItems: NavbarItem[] = [
+  {
+    name: "Hakkımızda",
+    to: "#",
+  },
+  {
+    name: "Juri - Yarışma Yazılımı",
+    to: "#",
+  },
+  {
+    name: "Word Ninja",
+    to: "#",
+  },
+  {
+    name: "Word Pyramids",
+    to: "#",
+  },
+];
+
 function HeaderNavbarList() {
   // TODO: implement router
   // const router = useRouter()
-
-  const navbarItems: NavbarItem[] = [
-    {
-      name: "Hakkımızda",
-      to: "#",
-    },
-    {
-      name: "Juri - Yarışma Yazılımı",
-      to: "#",
-    },
-    {
-      name: "Word Ninja",
-      to: "#",
-    },
-    {
-      name: "Word Pyramids",
-      to: "#",
-    },
-  ];
 
   return (
     <ul className="headernavbar">
@@ -53,26 +53,26 @@ function HeaderNavbarList() {
   );
 }
 
-function HeaderIconList() {
-  const iconList: IconItem[] = [
-    {
-      icon: YoutubeIcon,
-      to: "#",
-    },
-    {
-      icon: InstagramIcon,
-      to: "#",
-    },
-    {
-      icon: BeSocialIcon,
-      to: "#",
-    },
-    {
-      icon: LinkedinIcon,
-      to: "#",
-    },
-  ];
+const iconList: IconItem[] = [
+  {
+    icon: YoutubeIcon,
+    to: "#",
+  },
+  {
+    icon: InstagramIcon,
+    to: "#",
+  },
+  {
+    icon: BeSocialIcon,
+    to: "#",
+  },
+  {
+    icon: LinkedinIcon,
+    to: "#",
+  },
+];
 
+export function HeaderIconList() {
   return (
     <ul className="headericon">
       {iconList.map(({ icon, to }) => {

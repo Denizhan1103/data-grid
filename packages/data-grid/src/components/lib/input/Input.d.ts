@@ -3,6 +3,7 @@ export interface ComponentProperties {
   className?: string;
   placeholder?: string;
   startValue?: string | number;
-  type?: HTMLInputTypeAttribute;
-  onChange?: () => void;
+  after?: string;
+  type?: "text" | "number";
+  onChange?: (arg1: string) => void;
 }

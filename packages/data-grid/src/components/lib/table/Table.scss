@@ -73,6 +73,13 @@
       justify-content: center;
       gap: 23px;
     }
+
+    &-pagination {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+    }
   }
 }
 
@@ -88,5 +95,37 @@
     width: 90px;
     height: 37px;
     padding: 0 14px;
+    border: 1px solid #cfc0ff;
+  }
+}
+
+.pagination {
+  &__current {
+    width: 21px;
+    height: 25px;
+    border: 1px solid #eaeaea;
+    border-radius: 4px;
+    padding: 0;
+    text-align: center;
+  }
+
+  &__of {
+    font-family: "Poppins";
+    font-weight: 400;
+    font-size: 10px;
+    color: #c9c9c9;
+  }
+
+  &__last {
+    font-family: "Poppins";
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 15px;
+    color: #744bfc;
+  }
+
+  &__arrow {
+    width: 6px;
+    height: 12px;
   }
 }

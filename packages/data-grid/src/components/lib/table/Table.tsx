@@ -75,12 +75,12 @@ export default function Table({
           <p className="show__title">Show:</p>
           <Input
             className="show__input"
-            type="number"
             startValue={showRowCount}
+            after="satır"
           />
         </div>
         <div className="table__footer-pagination">
-          <img className="pagination__prev" />
+          <img className="pagination__arrow pagination__prev" />
           <Input
             className="pagination__current"
             startValue={meta.currentPage}
@@ -89,7 +89,7 @@ export default function Table({
           <span className="pagination__last">
             {Math.ceil(meta.totalDataCount / meta.rowPerPage)}
           </span>
-          <img className="pagination__next" />
+          <img className="pagination__arrow pagination__next" />
         </div>
       </section>
     </React.Fragment>

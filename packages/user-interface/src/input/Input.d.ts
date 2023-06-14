@@ -6,6 +6,7 @@ export interface ComponentProperties {
   className?: string;
   style?: React.CSSProperties;
   startValue?: string | number;
-  type?: HTMLInputTypeAttribute;
   onChange?: () => void;
+  onFocus?: () => void;
+  onBlur?: () => void;
 }

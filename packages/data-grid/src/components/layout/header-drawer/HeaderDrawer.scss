@@ -1,0 +1,31 @@
+.headerdrawer {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &__logo {
+    cursor: pointer;
+    margin-bottom: 32px;
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    &-item {
+      font-family: "Poppins";
+      font-weight: 400;
+      font-size: 14px;
+      cursor: pointer;
+    }
+  }
+
+  &__icon {
+    flex: 1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+}
