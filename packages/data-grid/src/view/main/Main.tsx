@@ -45,6 +45,12 @@ const tableData = [
   },
 ];
 
+const tableMetaData = {
+  totalDataCount: 3,
+  currentPage: 1,
+  rowPerPage: 4,
+};
+
 export default function Main() {
   return (
     <div className="main">
@@ -65,10 +71,8 @@ export default function Main() {
         />
       </section>
       <section className="main__table">
-        <Table header={tableHeaderData} data={tableData} />
+        <Table header={tableHeaderData} data={tableData} meta={tableMetaData} />
       </section>
-      <section className="main__footer"></section>
-      <div className="hello">alo</div>
     </div>
   );
 }

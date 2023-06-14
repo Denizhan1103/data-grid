@@ -12,6 +12,7 @@ export interface TableHeader {
 }
 
 export interface TableMeta {
-  dataCount: number;
+  totalDataCount: number;
   currentPage: number;
+  rowPerPage: number;
 }
